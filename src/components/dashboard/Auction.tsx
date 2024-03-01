@@ -32,18 +32,8 @@ const Auction = () => {
               onClick={() => bidArtwork(artwork.id)}
             />
           ))}
-          
         </FeaturedSection>
       </ContentSection>
-
-      {/* <ContentSection>
-        <h3>Upcoming Auction</h3>
-        <FeaturedSection>
-          {upcomingAuctions.map((artwork, index) => (
-            <UpcomingAuctionCard key={index} data={artwork} whichBid="Starting Bid" icon={calendar} time={formatDate(artwork.bidTime)} />
-          ))}
-        </FeaturedSection>
-      </ContentSection>  */}
     </>
   );
 };

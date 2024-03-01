@@ -41,7 +41,7 @@ const ArtList = () => {
 		const art = products.find((p: any) => p.id === artId);
 
 		// Using the callback form of setCarts to ensure i'm using the latest state
-		setCarts((prevCarts) => {
+		setCarts((prevCarts)=>{
 			const updatedCarts = [...prevCarts, art];
 			localStorage.setItem("carts", JSON.stringify(updatedCarts));
 			toast.success("Art added to cart");
