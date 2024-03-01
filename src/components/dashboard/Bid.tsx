@@ -132,7 +132,6 @@ const DetailInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* flex: 1; */
   width: 50%;
 
   p {

@@ -20,13 +20,13 @@ const BidForm = ({
   const dispatch = useDispatch();
   const { bidPrice, setBidPrice } = useContext(ProductContext);
   const [user, setUser] = useState(null);
-  const [bid, setBid] = useState({});  
+  const [bid, setBid] = useState({});
   const token = localStorage.getItem("token");
   const bidUser = useSelector((state) => state.user.bids);
   console.log("bidUser", bidUser);
   const latest = bidUser?.bids?.length > 0 && bidUser.bids[0];
 
-  console.log("latest",latest)
+  console.log("latest", latest);
   const addPriceHandler = () => {
     setBidPrice((prev: number) => prev + 1000);
   };
@@ -45,7 +45,6 @@ const BidForm = ({
     };
 
     try {
-      // Use the updated bidPrice in the API call
       axios
         .post(
           `http://localhost:5000/artwork/create-bids/${auctionId}`,
@@ -58,19 +57,16 @@ const BidForm = ({
           setBid(res?.data.bid);
           setUser(res?.data.user);
           toast.success(res.data.msg);
-          // Handle the response as needed
         })
         .catch((err) => {
           toast.error(err.response.data.error);
           console.log(err.response.data.error);
         });
     } catch (error) {
-      // Handle errors
       toast.error(error.response.data.error);
       console.error(error);
     }
   };
-
 
   return (
     <BidContainer>
@@ -101,7 +97,10 @@ const BidForm = ({
           <div>
             <h3>Your Bid</h3>
             <h4>
-              N <span style={{ fontSize: "24px" }}>{numberWithCommas(bidPrice)}</span>
+              N{" "}
+              <span style={{ fontSize: "24px" }}>
+                {numberWithCommas(bidPrice)}
+              </span>
             </h4>
           </div>
           <CalBtn onClick={addPriceHandler}>+</CalBtn>
