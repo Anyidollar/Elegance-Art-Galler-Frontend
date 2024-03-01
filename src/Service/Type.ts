@@ -1,0 +1,8 @@
+export const SET_AUTHENTICATED = " SET_AUTHENTICATED";
+export const SET_UNAUTHENTICATED = "SET_UNAUTHENTICATED";
+export const SET_USER = "SET_USER";
+export const REGISTER_USER = "REGISTER_USER";
+export const LOGIN_USER = "LOGIN_USER";
+export const LOADING_USER = "LOADING_USER";
+export const LOGIN_FAIL = 'LOGIN_FAIL';
+export const REGISTER_FAIL = "REGISTER_FAIL";
