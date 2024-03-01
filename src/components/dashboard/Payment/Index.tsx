@@ -51,7 +51,6 @@ const Payment = () => {
   const { firstname } = artist;
 
   const handleNextButtonClick = () => {
-    // Toggle the state to switch between PaymentInfo and Shipping components
     setDrop(status);
   };
 
@@ -64,7 +63,6 @@ const Payment = () => {
           style={{ margin: "10px 20px", cursor: "pointer" }}
         />
       </Link>
-      {/* <CartDetails /> */}
       <DetailContainer>
         <DetailInfo>
           <h3>Popular Art</h3>
@@ -131,9 +129,6 @@ const Payment = () => {
                 width: "100%",
               }}
             >
-              {/* <p onClick={()=> setDrop(true)} className={!status ? "toggle active" : "toggle"}>
-                Payment Info
-              </p> */}
               <p
                 onClick={() => setDrop(false)}
                 className={status ? "toggle active" : "toggle"}
@@ -142,7 +137,6 @@ const Payment = () => {
               </p>
             </div>
             <Shipping />
-            {/* {status  ? <Shipping/> : <PaymentInfo onNextButtonClick={handleNextButtonClick}/> } */}
           </div>
           <Modal />
         </DetailInfo2>
