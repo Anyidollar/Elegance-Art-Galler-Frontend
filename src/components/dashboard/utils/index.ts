@@ -14,7 +14,6 @@ export const timeDiff = (inputDate) => {
 	const bidTime = new Date(inputDate);
 	const currentTime = new Date();
 
-	// Calculate time difference in milliseconds
 	const timeDifference = bidTime.getTime() - currentTime.getTime();
 
 	// Calculate minutes and seconds
