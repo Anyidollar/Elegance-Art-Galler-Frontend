@@ -83,7 +83,6 @@ const ForgotPassword = () => {
               <BeatLoader
                 color="#fff"
                 loading={loading}
-                // cssOverride={override}
                 size={20}
                 aria-label="Loading Spinner"
                 data-testid="loader"
